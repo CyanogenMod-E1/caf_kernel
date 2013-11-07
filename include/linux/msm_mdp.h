@@ -555,6 +555,7 @@ struct mdp_overlay {
 	uint32_t pipe_type;
 	uint32_t id;
 	uint32_t user_data[7];
+	uint32_t bg_color;	
 	uint8_t horz_deci;
 	uint8_t vert_deci;
 	struct mdp_overlay_pp_params overlay_pp_cfg;
@@ -899,6 +900,7 @@ enum {
 	metadata_op_frame_rate,
 	metadata_op_vic,
 	metadata_op_wb_format,
+	metadata_op_wb_secure,
 	metadata_op_get_caps,
 	metadata_op_crc,
 	metadata_op_max
@@ -931,6 +933,7 @@ struct msmfb_metadata {
 		uint32_t panel_frame_rate;
 		uint32_t video_info_code;
 		struct mdss_hw_caps caps;
+		uint8_t secure_en;		
 	} data;
 };
 
